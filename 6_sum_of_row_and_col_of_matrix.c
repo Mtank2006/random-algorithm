@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <malloc.h>
 int* input_array(int size) {
     int* array = (int*)malloc(size * sizeof(int));
     if (array == NULL) {
@@ -37,17 +36,24 @@ int* matrix_sum_rows_cols(int** matrix,int v1,int v2,int mode) {
     //mode 0    v1 = row , v2 = col
     //mode 1    v1 = col , v2 = row
 }
+void print_matrix(int** matrix, int row, int col) {
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < col; j++) {
+            printf("%d ", matrix[i][j]);
+        }
+        printf("\n");
+    }
+}
 int main () {
     int row,col;
     scanf("%d",&row);
     scanf("%d",&col);
     int** matrix = matrix_formation(row,col);
+    print_matrix(matrix,row,col);
     int mode = 0;
     int* sum_row= matrix_sum_rows_cols(matrix,row,col,mode);
-    mode = 1;
+    mode = 1; 
     int* sum_col= matrix_sum_rows_cols(matrix,col,row,mode);
-    //int size = malloc_usable_size(arr);
-    //printf("%d",size);
     printf ("Row Sum\n");
     print_array(sum_row,row);
     printf ("Col Sum\n");
@@ -55,5 +61,4 @@ int main () {
     for (int i = 0; i < row; i++)
         free(matrix[i]);
     free(matrix);
-
 }
