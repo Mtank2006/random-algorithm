@@ -1,1 +1,59 @@
-.vscode
+################################
+# C / C++ compiled artifacts
+################################
+*.o
+*.obj
+*.so
+*.dll
+*.dylib
+*.a
+*.exe
+*.out
+
+################################
+# C / C++ build directories
+################################
+build/
+bin/
+cmake-build-*/
+CMakeFiles/
+*.cmake
+Makefile
+compile_commands.json
+
+################################
+# Java compiled artifacts
+################################
+*.class
+*.jar
+*.war
+*.ear
+
+################################
+# Java build directories
+################################
+target/
+out/
+
+################################
+# VS Code
+################################
+.vscode/
+!.vscode/extensions.json
+
+################################
+# OS / editor junk
+################################
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*.bak
+
+################################
+# Debug / cache
+################################
+*.dSYM/
+*.stackdump
+
