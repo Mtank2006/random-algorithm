@@ -2,63 +2,27 @@
 # C / C++ compiled artifacts
 ################################
 *.o
-*.obj
-*.so
-*.dll
-*.dylib
-*.a
-*.exe
-*.out
+################################
+# Ignore everything by default
+################################
+*
 
 ################################
-# C / C++ build directories
+# Allow directories
 ################################
-build/
-bin/
-cmake-build-*/
-CMakeFiles/
-*.cmake
-Makefile
-compile_commands.json
+!*/
 
 ################################
-# Java compiled artifacts
+# Allow source files only
 ################################
-*.class
-*.jar
-*.war
-*.ear
+!**/*.c
+!**/*.cpp
+!**/*.java
+!**/*.h
 
 ################################
-# Java build directories
+# Allow git files
 ################################
-target/
-out/
-
-################################
-# VS Code
-################################
-.vscode/
-!.vscode/extensions.json
-
-################################
-# OS / editor junk
-################################
-.DS_Store
-Thumbs.db
-*.log
-*.tmp
-*.swp
-*.bak
-
-################################
-# Debug / cache
-################################
-*.dSYM/
-*.stackdump
-
-################################
-# CHP folders
-################################
-*.chp/
+!.gitignore
+!README.md
 
