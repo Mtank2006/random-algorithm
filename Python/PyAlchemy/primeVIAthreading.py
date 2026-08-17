@@ -47,5 +47,5 @@ def threaded_primes(start, end, num_threads=4):
 
 
 if __name__ == "__main__":
-    primes = threaded_primes(1, 10000000, num_threads=128)
+    primes = threaded_primes(1, 10000000, num_threads=10)
     print(primes)

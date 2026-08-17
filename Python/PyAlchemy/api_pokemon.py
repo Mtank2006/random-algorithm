@@ -17,9 +17,9 @@ def get_pokemon_info(name):
 def main():
     print("Running API demo...")
     # API code goes here
-    # pokemon_name = "bulbasaur"
+    pokemon_name = "bulbasaur"
     # pokemon_name = "Typhlosion"
-    pokemon_name = "Pikachu"
+    # pokemon_name = "Pikachu"
     pokemon_info = get_pokemon_info(pokemon_name)
 
     if pokemon_info:
